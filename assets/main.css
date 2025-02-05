@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'Gothic60';
+    src: url('/public/FliegeMono-Regular.otf') format('opentype');
+}
+
+body {
+    font-family: 'Gothic60', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #e0e0e0;
+    text-decoration: none;
+}
+
+input {
+    background-color: #191528;
+    border: 3px solid #110e1b;
+    color: #e6e6e6;
+    height: 30px;
+    width: 200px;
+}
+
+input::placeholder {
+    text-align: center;
+}
+
+button {
+    background-color: #7c162e;
+    color: #e0e0e0;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5c162e;
+}
+
