@@ -42,8 +42,14 @@ const addScore = async () => {
 }
 
 .score {
-  margin: 0;
+  margin: 1rem;
   font-size: 2.5rem;
+  background: none;
+  display: inline-block;
+  text-shadow: 
+    0 0 20px #ff1f4b,
+    0 0 30px #ff1f4b,
+    0 0 40px #ff1f4b;
 }
 </style>
   
