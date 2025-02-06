@@ -1,22 +1,10 @@
 <template>
   <div>
-    <button class="circle-btn" aria-label="Circle Button" @click="onclickfunc">
+    <button class="circle-btn" aria-label="Circle Button">
         <img src="/public/bober.png" alt="Button Icon">
     </button>
   </div>
 </template>
-
-<script>
-export default {
-    name: 'ClickerButton',
-    props: {
-        onclickfunc: {
-            type: Function,
-            required: true
-        }
-    }
-}
-</script>
 
 <style>
     .circle-btn {
