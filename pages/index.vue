@@ -9,6 +9,10 @@
             <button @click="submitpfp">Submit</button>
         </div>
         <button @click="logout">Log out</button> 
+        <input type="text" id="recipient" placeholder="komu otpravit">
+        <input type="text" id="amount" placeholder="skolko otpravit">
+        <button @click="send">Send</button>
+        <p id="status"></p>
     </div>
 </template>
 
@@ -45,6 +49,19 @@
     const logout = () => {
         token.value = null
         navigateTo("/login")
+    }
+
+    const send = async () => {
+        const recipient = document.getElementById("recipient").value
+        const amount = document.getElementById("amount").value
+        const { data: response } = await useFetch(`${api_url}/send/${recipient}?amount=${amount}`, {
+          method: 'get',
+          headers: { 
+            'Content-Type': 'application/json', 
+            'Authorization': `${token.value}` 
+          },
+        })
+        document.getElementById("status").innerText = response.value?.message
     }
 </script>
 
