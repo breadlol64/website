@@ -7,7 +7,8 @@
         <div class="newpfp">
             <input type="text" id="pfpurl" placeholder="Profile Picture URL">
             <button @click="submitpfp">Submit</button>
-        </div> 
+        </div>
+        <button @click="logout">Log out</button> 
     </div>
 </template>
 
@@ -39,6 +40,11 @@
           },
         })
         pfpurl.value = newpfp
+    }
+
+    const logout = () => {
+        token.value = null
+        navigateTo("/login")
     }
 </script>
 
