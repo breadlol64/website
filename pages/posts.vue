@@ -1,11 +1,11 @@
 <template>
-    <div class="posts-layout">
-      <div class="posts">
-        <NewPost />
-        <Post v-for="id in postIds" :key="id" :post-id="id" />
-      </div>
+  <div class="posts-layout">
+    <div class="posts">
+      <NewPost />
+      <Post v-for="id in postIds" :key="id" :post-id="id" />
     </div>
-  </template>
+  </div>
+</template>
 
 <script setup>
 const postIds = ref([]);
@@ -24,15 +24,30 @@ onMounted(async () => {
 });
 </script>
 
-
-
 <style scoped>
-  .posts {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-   width: 100%; /* Ensure the container does not shrink or grow unnecessarily */
-    max-width: 700px; /* Set a reasonable max width to control post size */
-  }
+.posts-layout {
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+}
 
+/* Center the posts container with a max-width for larger screens */
+.posts {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 600px) {
+  .posts {
+    max-width: 100%;
+    padding: 0 0rem;
+  }
+}
 </style>
