@@ -16,7 +16,7 @@ a {
     text-decoration: none;
 }
 
-input {
+input, textarea {
     background-color: #191528;
     border: 3px solid #110e1b;
     color: #e6e6e6;

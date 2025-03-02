@@ -18,12 +18,18 @@
 }
 
 .sidebar {
+  position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: center;
   border-right: 3px solid #232323;
   border-radius: 20px;
   width: 225px;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: #1a1a1a; /* Set background to match your design */
+  padding-top: 20px;
 }
 
 .sidebar-item {
@@ -32,7 +38,7 @@
   height: 40px;
   align-items: center;
   justify-content: center;
-  background-color:#232323;
+  background-color: #232323;
   border-radius: 5px;
 }
 
@@ -42,10 +48,14 @@
 }
 
 .page-content {
+  margin-left: 225px;
   flex: 1;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start; /* Changed from center */
+  align-items: center; /* This will center horizontally; adjust if needed */
   flex-direction: column;
+  overflow-y: auto; /* Optional: enables scrolling if content exceeds viewport height */
+  padding-top: 20px; /* Optional: add some spacing from the top */
 }
 </style>
+

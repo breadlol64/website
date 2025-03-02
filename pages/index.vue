@@ -62,10 +62,11 @@
           },
         })
         document.getElementById("status").innerText = response.value?.message
+        // !!! ADD COMMISION !!!
     }
 </script>
 
-<style>
+<style scoped>
     .pfp {
         width: 100px;
         height: 100px;
