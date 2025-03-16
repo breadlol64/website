@@ -9,6 +9,9 @@
       <NuxtLink to="/"><div class="sidebar-item">profile</div></NuxtLink>
       <NuxtLink to="/bober"><div class="sidebar-item">🤑bober kombaet🤑</div></NuxtLink>
       <NuxtLink to="/posts"><div class="sidebar-item">posts</div></NuxtLink>
+      <br>
+      <NuxtLink to="/store"><div class="sidebar-item">store</div></NuxtLink>
+
     </div>
     <div class="page-content">
       <NuxtPage />

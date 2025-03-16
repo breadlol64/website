@@ -8,11 +8,13 @@
             <input type="text" id="pfpurl" placeholder="Profile Picture URL">
             <button @click="submitpfp">Submit</button>
         </div>
-        <button @click="logout">Log out</button> 
+        <br>
         <input type="text" id="recipient" placeholder="komu otpravit">
         <input type="text" id="amount" placeholder="skolko otpravit">
         <button @click="send">Send</button>
         <p id="status"></p>
+        <br>
+        <button @click="logout">Log out</button> 
     </div>
 </template>
 
