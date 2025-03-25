@@ -14,17 +14,6 @@ import { api_url } from "../utils/constants.js";
 const login = async () => {
   window.location.href = "https://discord.com/oauth2/authorize?client_id=1350792860256960522&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fcallback&scope=identify+email";
 }
-
-useHead({
-  script: [
-    {
-      src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
-      async: true,
-      crossorigin: 'anonymous',
-      'data-ad-client': 'ca-pub-2443238834565226',
-    },
-  ],
-})
 </script>
 
 <style scoped>

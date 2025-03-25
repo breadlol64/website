@@ -27,17 +27,6 @@ onMounted(async () => {
     console.error('Error fetching post IDs:', error);
   }
 });
-
-useHead({
-  script: [
-    {
-      src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
-      async: true,
-      crossorigin: 'anonymous',
-      'data-ad-client': 'ca-pub-2443238834565226',
-    },
-  ],
-})
 </script>
 
 <style scoped>

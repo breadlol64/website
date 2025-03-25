@@ -40,17 +40,6 @@
     username.value = response.value?.username
     pfpurl.value = response.value?.profile_pic
     verified.value = response.value?.verified
-
-    useHead({
-  script: [
-    {
-      src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
-      async: true,
-      crossorigin: 'anonymous',
-      'data-ad-client': 'ca-pub-2443238834565226',
-    },
-  ],
-})
 </script>
 
 <style scoped>
