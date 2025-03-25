@@ -1,76 +1,19 @@
 <template>
     <div class="contain">
         <div class="container">
-            <input type="text" placeholder="username" name="username" id="usrfield"> <br>
-            <input type="password" name="password" id="pwfield" placeholder="password"> <br>
             <div class="button-container">
-                <button id="loginbtn" @click="login">login</button>
-                <button id="regbtn" @click="reg">register</button>
+                <button id="loginbtn" @click="login">login with discord <img src="/public/Discord-Symbol-White.svg" width="20" height="20"></img></button>
             </div>
-            <div id="status">{{ response }}</div>
         </div>
     </div>
 </template>
 
-<script>
+<script setup>
 import { api_url } from "../utils/constants.js";
 
-export default {
-  data() {
-    return {
-      response: "",
-    };
-  },
-  setup() {
-    const tokenCookie = useCookie("token", { maxAge: 60 * 60 * 24 * 14, path: "/" });
-
-    const login = async () => {
-      const usr = document.getElementById("usrfield").value;
-      const pw = document.getElementById("pwfield").value;
-
-      try {
-        const { data: response } = await useFetch(`${api_url}/login`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ username: usr, password: pw }),
-        });
-
-        if (response.value?.token) {
-          tokenCookie.value = response.value.token;
-          document.getElementById("status").innerHTML = "logged in";
-        } else {
-          document.getElementById("status").innerHTML = response.value;
-        }
-      } catch (error) {
-        document.getElementById("status").innerHTML = "An error occurred.";
-      }
-    };
-    const reg = async () => {
-      const usr = document.getElementById("usrfield").value;
-      const pw = document.getElementById("pwfield").value;
-
-      try {
-        const { data: response } = await useFetch(`${api_url}/reg`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ username: usr, password: pw }),
-        });
-        console.log(response);
-        if (response.value?.msg == "User registered successfully") {
-          login();
-        } else {
-          document.getElementById("status").innerHTML = response.value;
-        }
-      } catch (error) {
-        document.getElementById("status").innerHTML = "An error occurred.";
-      }
-    };
-
-    return {
-      login, reg
-    };
-  },
-};
+const login = async () => {
+  window.location.href = "https://discord.com/oauth2/authorize?client_id=1350792860256960522&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fcallback&scope=identify+email";
+}
 </script>
 
 <style scoped>
@@ -91,6 +34,10 @@ export default {
         display: flex;
         gap: 10px;
         margin-top: 10px;
+    }
+    .button-container button {
+      background-color: #5865F2;
+      font-size: 20px;
     }
 </style>
 
