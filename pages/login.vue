@@ -1,3 +1,6 @@
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2443238834565226"
+     crossorigin="anonymous"></script>
+
 <template>
     <div class="contain">
         <div class="container">
