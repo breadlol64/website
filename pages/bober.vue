@@ -1,11 +1,4 @@
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2443238834565226"
-     crossorigin="anonymous"></script>
-
 <template>
-  <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2443238834565226"
-     crossorigin="anonymous"></script>
-  </head>
 
   <div class="container">
     <h1 class="score">{{ score }}</h1>
@@ -37,6 +30,17 @@ const addScore = async () => {
     },
   })
 }
+
+useHead({
+  script: [
+    {
+      src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
+      async: true,
+      crossorigin: 'anonymous',
+      'data-ad-client': 'ca-pub-2443238834565226',
+    },
+  ],
+})
 </script>
 
 <style scoped>
