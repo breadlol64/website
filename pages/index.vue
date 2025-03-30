@@ -19,12 +19,12 @@
 </template>
 
 <script setup>
-    const token = useCookie('token')
+    const token = useCookie("token")
     const username = ref("dddd")
     const pfpurl = ref("")
     const verified = ref(false)
 
-    const { data: response } = await useFetch(`${api_url}/user`, {
+    const { data: response } = await useFetch(`${api_url}/user/me`, {
       method: 'GET',
       headers: { 
         'Content-Type': 'application/json', 
@@ -33,7 +33,7 @@
     })
 
     username.value = response.value?.username
-    pfpurl.value = response.value?.profile_pic
+    pfpurl.value = response.value?.avatar
     verified.value = response.value?.verified
 
     const submitpfp = async () => {

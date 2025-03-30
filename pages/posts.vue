@@ -1,9 +1,4 @@
 <template>
-  <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2443238834565226"
-     crossorigin="anonymous"></script>
-  </head>
-
   <div class="posts-layout">
     <div class="posts">
       <NewPost />

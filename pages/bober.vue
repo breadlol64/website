@@ -10,14 +10,14 @@
 const token = useCookie('token')
 const score = ref(0)
 
-const { data: response } = await useFetch(`${api_url}/user`, {
+const { data: response } = await useFetch(`${api_url}/user/me`, {
   method: 'GET',
   headers: { 
     'Content-Type': 'application/json', 
     'Authorization': `${token.value}` 
   },
 })
-score.value = response.value?.coins
+score.value = response.value?.balance
 
 const addScore = async () => {
   score.value++

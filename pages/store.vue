@@ -1,9 +1,4 @@
 <template>
-  <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2443238834565226"
-     crossorigin="anonymous"></script>
-  </head>
-
   <div class="apps-layout">
     <div class="apps">
       <App v-for="id in appIds" :key="id" :app-id="id" />
