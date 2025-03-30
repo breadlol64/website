@@ -11,7 +11,6 @@
       <NuxtLink to="/posts"><div class="sidebar-item">posts</div></NuxtLink>
       <br>
       <NuxtLink to="/store"><div class="sidebar-item">store</div></NuxtLink>
-      <p style="color: #121212">v0.1.4 | api v0.1.0</p>
     </div>
     <div class="page-content">
       <NuxtPage />
